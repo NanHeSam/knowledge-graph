@@ -44,16 +44,16 @@ def generate(topic: str) -> GraphV2:
 def add_to_node(node_name: str) -> GraphV2:
     print("generating for topic", node_name)
     output = get_topic_map(topic=node_name)
-    for node in output.nodes:
-        edge = EdgesV2(source=node_name, target=node.name, info="This is a relationship")
-        output.edges.append(edge)
+
 
     print("-------------------edges-------------------")
     for edge in output.edges:
         print(edge)
     print("-------------------nodes--------------")
     for node in output.nodes:
+        output.edges.append(EdgesV2(source=node_name, target=node.name, info="This is a relationship"))
         print(node)
+
     return output
 
 

@@ -83,7 +83,7 @@ function GraphComponent({ data }) {
 
 
   return (
-    <div style={{ height: '500px', width: '100%' }}>
+    <div style={{ height: '1000px', width: '100%' }}>
       <ReactFlow
         nodes={graphData.nodes}
         edges={graphData.edges}
